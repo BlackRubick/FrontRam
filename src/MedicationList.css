@@ -1,0 +1,74 @@
+/* src/components/MedicationList.css */
+
+.list-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Fondo blanco para un aspecto limpio */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Color de texto oscuro para un buen contraste */
+  font-size: 24px; /* Tamaño de fuente más grande para los encabezados */
+}
+
+.medication-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.medication-table th,
+.medication-table td {
+  border: 1px solid #ccc; /* Borde gris claro para un aspecto más sutil */
+  padding: 12px;
+  text-align: left;
+}
+
+.medication-table th {
+  background-color: #f0f0f0; /* Color de fondo gris claro para los encabezados */
+  color: #333; /* Color de texto oscuro */
+  font-weight: bold; /* Negrita para los encabezados */
+}
+
+.medication-table tr:nth-child(even) {
+  background-color: #fafafa; /* Color de fondo gris muy claro para las filas pares */
+}
+
+.medication-table tr:hover {
+  background-color: #f0f0f0; /* Color de fondo gris claro para el hover */
+}
+
+.medication-table td {
+  color: #333; /* Color de texto oscuro para las celdas */
+  font-size: 16px; /* Tamaño de fuente más grande para una mejor legibilidad */
+}
+
+/* Estilo para el botón Agregar Medicamento */
+.add-button {
+  display: block;
+  width: 100%;
+  max-width: 220px; /* Ajuste del tamaño máximo del botón */
+  margin: 20px auto;
+  padding: 12px;
+  background-color: #0056b3; /* Azul más oscuro para un aspecto profesional */
+  color: #ffffff; /* Color blanco para el texto del botón */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center; /* Alineación centrada del texto en el botón */
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #004080; /* Azul aún más oscuro para el hover */
+}
+
+.add-button:active {
+  background-color: #003366; /* Azul muy oscuro para el estado activo */
+}

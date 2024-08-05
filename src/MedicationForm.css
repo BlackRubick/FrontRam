@@ -1,0 +1,78 @@
+/* App.css o el archivo CSS correspondiente */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Fondo neutro claro */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura completa de la ventana */
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco para contraste con el formulario */
+}
+
+.form-wrapper {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Tamaño máximo del formulario reducido para una apariencia más compacta */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333; /* Gris oscuro para un título serio */
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333333; /* Gris oscuro para las etiquetas */
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #cccccc; /* Gris claro para los bordes */
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333333; /* Gris oscuro para el texto del input */
+  background-color: #ffffff; /* Fondo blanco para los inputs */
+}
+
+input:focus {
+  border-color: #007bff; /* Azul profesional para el borde al enfocarse */
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  background-color: #007bff; /* Azul profesional para el botón */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul oscuro para el hover del botón */
+}
+
+button:active {
+  background-color: #004080; /* Azul más oscuro para el estado activo del botón */
+}
