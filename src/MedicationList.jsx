@@ -1,5 +1,7 @@
+// MedicationList.jsx
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Asegúrate de importar axios
 import './MedicationList.css';
 
 const MedicationList = () => {
@@ -10,14 +12,10 @@ const MedicationList = () => {
     // Fetch data from the API
     const fetchMedications = async () => {
       try {
-        const response = await fetch('http://localhost:8000/medications/');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setMedications(data);
+        const response = await axios.get('http://23.21.150.53:8000/medications/');
+        setMedications(response.data);
       } catch (error) {
-        console.error('Error fetching medications:', error);
+        console.error('Error fetching medications:', error.response?.data || error.message);
       }
     };
 

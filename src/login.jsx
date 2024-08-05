@@ -15,7 +15,7 @@ function Login() {
     
     try {
       // Enviar solicitud de inicio de sesión a la API
-      const response = await axios.post('http://52.87.99.94:8000/login/', { email, password });
+      const response = await axios.post('http://23.21.150.53:8000/login/', { email, password });
 
       // Si el inicio de sesión es exitoso, redirigir al usuario y mostrar el mensaje de éxito
       if (response.status === 200) {

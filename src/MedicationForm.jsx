@@ -1,6 +1,7 @@
 // MedicationForm.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Asegúrate de importar axios
 import './MedicationForm.css'; // Asegúrate de importar el archivo CSS
 
 const MedicationForm = () => {
@@ -34,20 +35,13 @@ const MedicationForm = () => {
     };
 
     try {
-      const response = await fetch('http://52.87.99.94:8000/medications/', {
-        method: 'POST',
+      const response = await axios.post('http://23.21.150.53:8000/medications/', formattedData, {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formattedData),
       });
 
-      if (!response.ok) {
-        throw new Error('Error en la solicitud');
-      }
-
-      const result = await response.json();
-      console.log('Medicamento registrado:', result);
+      console.log('Medicamento registrado:', response.data);
 
       // Limpiar el formulario después de enviar
       setFormData({
@@ -62,7 +56,7 @@ const MedicationForm = () => {
       // Redirigir a la vista /table
       navigate('/table');
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:', error.response?.data || error.message);
       // Manejar el error
     }
   };
